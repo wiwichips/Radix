@@ -83,7 +83,7 @@ public class RadixSorting {
                 } else if (rsa[i].charAt(j) == ca[9]) {
                     list9.add(rsa[i]);
                 } else {
-                    System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! " + rsa[i]);
+                    System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! DID YOU RUIN MY PROGRAM JOSH!!!! " + rsa[i]);
                 }
                 
                 numComparisons++;
