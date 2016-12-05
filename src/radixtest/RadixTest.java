@@ -15,19 +15,17 @@ public class RadixTest extends RadixSorting{
      * @param args 
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        // DECLARATIONS AND INITIALIZATIONS
+        long timeStart; // measure the time at the start of the program
+        long elapsedTime = 0; // variable for the elapsed time since start
         
-//        // READ LINES FROM THE TEXT FILE
-//        try(BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
-//            StringBuilder sb = new StringBuilder();
-//            String line = br.readLine();
-//
-//            while (line != null) {
-//                sb.append(line);
-//                sb.append(System.lineSeparator());
-//                line = br.readLine();
-//            }
-//            String everything = sb.toString();
-//        }
+        timeStart = System.currentTimeMillis(); // begin counting time
+        // READ LINES FROM THE TEXT FILE
+        
+        
+        // measure the count of time at the end of the program
+        elapsedTime=System.currentTimeMillis();
+        System.out.println("The time is "+ (elapsedTime - timeStart)+"ms\nor "+(elapsedTime - timeStart)/1000.0+"seconds"); //Output
         
         
     } 
