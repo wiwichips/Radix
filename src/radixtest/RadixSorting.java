@@ -62,25 +62,25 @@ public class RadixSorting {
 
                 if (rsa[i].length() < j + 1) {
                     list0.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '0') {
+                } else if (rsa[i].charAt(j) == ca[0]) {
                     list0.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '1') {
+                } else if (rsa[i].charAt(j) == ca[1]) {
                     list1.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '2') {
+                } else if (rsa[i].charAt(j) == ca[2]) {
                     list2.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '3') {
+                } else if (rsa[i].charAt(j) == ca[3]) {
                     list3.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '4') {
+                } else if (rsa[i].charAt(j) == ca[4]) {
                     list4.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '5') {
+                } else if (rsa[i].charAt(j) == ca[5]) {
                     list5.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '6') {
+                } else if (rsa[i].charAt(j) == ca[6]) {
                     list6.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '7') {
+                } else if (rsa[i].charAt(j) == ca[7]) {
                     list7.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '8') {
+                } else if (rsa[i].charAt(j) == ca[8]) {
                     list8.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == '9') {
+                } else if (rsa[i].charAt(j) == ca[9]) {
                     list9.add(rsa[i]);
                 } else {
                     System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! " + rsa[i]);
