@@ -26,6 +26,7 @@ public class RadixSorting {
         String[] rsa = new String[ia.length]; // rsa = string array for the reversed input
         char[] ca = "0123456789".toCharArray(); // make a character array of characters ranging from 0 to 9
         
+        int numComparisons = 0;
         
         // FOR LOOP FOR MAX DIGIT DETERMINATION AND TO MAKE STRING ARRAY
         for(int i=0; i<ia.length; i++){
@@ -84,6 +85,8 @@ public class RadixSorting {
                 } else {
                     System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! " + rsa[i]);
                 }
+                
+                numComparisons++;
             }
             
             // ADD ALL BUCKET LISTS TO MEGA LIST
@@ -123,6 +126,9 @@ public class RadixSorting {
             ia[i] = Integer.parseInt(rsa[i]);
         }
 
+        // PRINT THE NUMBER OF COMPARISONS
+        System.out.println("Number of Comparisons: "+numComparisons);
+        
         // RETURN THE INT ARRAY
         return ia;
     }
