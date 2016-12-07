@@ -26,7 +26,7 @@ public class RadixSorting {
         String[] rsa = new String[ia.length]; // rsa = string array for the reversed input
         char[] ca = "0123456789".toCharArray(); // make a character array of characters ranging from 0 to 9
         
-        int numComparisons = 0;
+        int numComparisons = 0; //value used for the amount of comparisons
         
         // FOR LOOP FOR MAX DIGIT DETERMINATION AND TO MAKE STRING ARRAY
         for(int i=0; i<ia.length; i++){
@@ -41,7 +41,7 @@ public class RadixSorting {
             rsa[i]=reverseOrder(sa[i]);
         }
 
-        // MAKE ALL THE BUCKET ARRAY LISTS
+        // MAKE ALL THE BUCKET ARRAY LISTS FOR EACH INTEGER DIGIT POSSIBILITIES
         ArrayList<String> list0 = new ArrayList<String>();
         ArrayList<String> list1 = new ArrayList<String>();
         ArrayList<String> list2 = new ArrayList<String>();
@@ -56,13 +56,15 @@ public class RadixSorting {
         // MAKE THE MEGA LIST THAT ALL THE BUCKETS WILL POUR INTO
         ArrayList<String> megaList = new ArrayList<String>();
 
+        // FOR EVERY GIGUT UNTI AND TO THR MAXIMUM DIGIT
         for (int j = 0; j < maxDigit; j++) {
             // SORT THE j COLOUMN
             for (int i = 0;  i < rsa.length; i++) {
 
-                if (rsa[i].length() < j + 1) {
-                    list0.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == ca[0]) {
+                // if the string has a length shorter than the cyrrebt digit being anaylisized
+                if (rsa[i].length() < j + 1) { 
+                    list0.add(rsa[i]); // add to the zero buckdt arraylist
+                } else if (rsa[i].charAt(j) == ca[0]) { // if the char is '0', add the string to zero bucket
                     list0.add(rsa[i]);
                 } else if (rsa[i].charAt(j) == ca[1]) {
                     list1.add(rsa[i]);
@@ -86,7 +88,7 @@ public class RadixSorting {
                     System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! DID YOU RUIN MY PROGRAM JOSH!!!! " + rsa[i]);
                 }
                 
-                numComparisons++;
+            
             }
             
             // ADD ALL BUCKET LISTS TO MEGA LIST
