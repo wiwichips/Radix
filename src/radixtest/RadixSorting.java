@@ -63,10 +63,10 @@ public class RadixSorting {
 
                 // if the string has a length shorter than the cyrrebt digit being anaylisized
                 if (rsa[i].length() < j + 1) { 
-                    list0.add(rsa[i]); // add to the zero buckdt arraylist
+                    list0.add(rsa[i]); // add to the zero bucket arraylist
                 } else if (rsa[i].charAt(j) == ca[0]) { // if the char is '0', add the string to zero bucket
                     list0.add(rsa[i]);
-                } else if (rsa[i].charAt(j) == ca[1]) {
+                } else if (rsa[i].charAt(j) == ca[1]) {// if the char is '1', add the string to one bucket
                     list1.add(rsa[i]);
                 } else if (rsa[i].charAt(j) == ca[2]) {
                     list2.add(rsa[i]);
@@ -103,7 +103,7 @@ public class RadixSorting {
             megaList.addAll(list8);
             megaList.addAll(list9);
 
-            // TRANSFER THE DATA FROM THE MEGALIST INTO THE REVERSED STRING ARRAY
+            // TRANSFER THE DATA FROM THE MEGALIST BACK INTO THE REVERSED STRING ARRAY
             for (int q = 0; q < rsa.length; q++) {
                 rsa[q] = megaList.get(q);
             }
