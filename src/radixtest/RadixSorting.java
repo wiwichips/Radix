@@ -61,29 +61,40 @@ public class RadixSorting {
             // SORT THE j COLOUMN
             for (int i = 0;  i < revrersedStringArray.length; i++) {
 
-                // if the string has a length shorter than the cyrrebt digit being anaylisized
+                // if the string has a length shorter than the current digit being analyzed
                 if (revrersedStringArray[i].length() < j + 1) { 
                     list0.add(revrersedStringArray[i]); // add to the zero bucket arraylist
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[0]) { // if the char is '0', add the string to zero bucket
                     list0.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[1]) {// if the char is '1', add the string to one bucket
                     list1.add(revrersedStringArray[i]);
-                } else if (revrersedStringArray[i].charAt(j) == ca[2]) {
+                    numComparisons++;
+                } else if (revrersedStringArray[i].charAt(j) == ca[2]) {// etc...
                     list2.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[3]) {
                     list3.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[4]) {
                     list4.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[5]) {
                     list5.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[6]) {
                     list6.add(revrersedStringArray[i]);
+                    numComparisons++;                    
                 } else if (revrersedStringArray[i].charAt(j) == ca[7]) {
                     list7.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[8]) {
                     list8.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else if (revrersedStringArray[i].charAt(j) == ca[9]) {
                     list9.add(revrersedStringArray[i]);
+                    numComparisons++;
                 } else {
                     System.out.println("WWWWWHAT!?> THIS WASN'T SUUPOSED TO PRINT EVER! DID YOU RUIN MY PROGRAM JOSH!!!! " + revrersedStringArray[i]);
                 }
@@ -154,5 +165,4 @@ public class RadixSorting {
         reverseOrder = String.copyValueOf(hi);
         return reverseOrder; // return
     }
-    
 }
